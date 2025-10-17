@@ -325,10 +325,20 @@ main {
     color: var(--color-grey-950);
   }
 
+  .cart-item-list-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--spacing-0300);
+    padding: var(--spacing-0300) var(--spacing-0100);
+  }
+
   .popup-cart-empty {
-    height: 100%;
+    justify-content: center;
+  }
+
+  .popup-cart-empty-text {
     text-align: center;
-    align-content: center;
 
     font-family: var(--font-1);
     font-size: var(--fontsize-preset-3-bold);
@@ -336,14 +346,6 @@ main {
     line-height: var(--lineheight-preset-3-bold);
     letter-spacing: var(--letterspacing-preset-3-bold);
     color: var(--color-grey-500);
-  }
-
-  .cart-item-list-wrapper {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    row-gap: var(--spacing-0300);
-    padding: var(--spacing-0300) var(--spacing-0100);
   }
 
   .popup-link-checkout {

@@ -36,8 +36,10 @@ function openCheckoutPopup() {
   // When empty
   if (cartList.length === 0) {
     const cartEmptyWrapper = document.createElement("p");
-    cartEmptyWrapper.classList.add("popup-cart-empty");
+    cartEmptyWrapper.classList.add("popup-cart-empty-text");
     cartEmptyWrapper.innerHTML = "Your cart is empty.";
+
+    cartListWrapper.classList.add("popup-cart-empty");
 
     cartListWrapper.append(cartEmptyWrapper);
   }
