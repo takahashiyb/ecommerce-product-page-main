@@ -51,20 +51,20 @@ elementCart.addEventListener("click", () => {
         2
       )}</strong></p>
           </div>
-          <button>
+          <button aria-label="removes item from the cart">
             <img src="./images/icon-delete.svg" alt="delete icon" />
           </button>
       `;
       cartListWrapper.append(elementCartItem);
     }
 
-    const elementButtonCheckout = document.createElement("button");
-    elementButtonCheckout.classList.add("popup-button-checkout");
-    elementButtonCheckout.innerHTML = "Checkout";
+    const elementLinkCheckout = document.createElement("a");
+    elementLinkCheckout.classList.add("popup-link-checkout");
+    elementLinkCheckout.innerHTML = "Checkout";
+    elementLinkCheckout.href = "#";
+    elementLinkCheckout.setAttribute("aria-label", "leads to checkout page");
 
-    cartListWrapper.append(elementButtonCheckout);
-
-    // cartListWrapper;
+    cartListWrapper.append(elementLinkCheckout);
   }
 
   elementPopup.append(cartListWrapper);
