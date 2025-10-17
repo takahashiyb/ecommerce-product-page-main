@@ -3,12 +3,24 @@ import { cartList } from "./cart.js";
 const elementCart = document.getElementById("cart-link");
 
 elementCart.addEventListener("click", () => {
+  if (elementCart.getAttribute("aria-expanded") === "false") {
+    openCheckoutPopup();
+  } else {
+    const elementBody = document.querySelector("body");
+    const elementPopup = document.querySelector(".popup-cart");
+    elementBody.removeChild(elementPopup);
+    elementCart.setAttribute("aria-expanded", "false");
+  }
+});
+
+function openCheckoutPopup() {
   const elementBody = document.querySelector("body");
+
+  elementCart.setAttribute("aria-expanded", "true");
 
   const elementPopup = document.createElement("div");
   elementPopup.classList.add("popup-cart");
   elementPopup.setAttribute("role", "region");
-  elementPopup.setAttribute("aria-expanded", "true");
 
   const elementMain = elementBody.querySelector("main");
 
@@ -70,4 +82,4 @@ elementCart.addEventListener("click", () => {
   elementPopup.append(cartListWrapper);
 
   elementBody.insertBefore(elementPopup, elementMain);
-});
+}
