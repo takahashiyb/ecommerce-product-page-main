@@ -12,9 +12,17 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/index.css" />
+
     <title>Frontend Mentor | E-commerce product page</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
         font-size: 11px;
@@ -27,17 +35,28 @@
   </head>
   <body>
     <header>
-      <h1></h1>
-      <button aria-label="navigation menu button">
+      <!-- <h1></h1> -->
+      <button
+        aria-label="navigation menu button"
+        class="navigation-menu-button"
+      >
         <img src="./images/icon-menu.svg" alt="nav button image" />
       </button>
-      <img src="./images/logo.svg" alt="site logo" />
-      <a href="#cart">
-        <img src="./images/icon-cart.svg" alt="cart link image" />
+      <div class="site-logo">
+        <img src="./images/logo.svg" alt="site logo " />
+      </div>
+      <a
+        href="#cart"
+        aria-label="redirects to the user's cart page"
+        class="cart-link"
+      >
+        <img src="./images/icon-cart.svg" alt="cart icon" />
       </a>
-      <a href="#profile"
-        ><img src="./images/image-avatar.png" alt="profile link image"
-      /></a>
+      <div class="profile-link">
+        <a href="#profile" aria-label="redirects to the user's profile page"
+          ><img src="./images/image-avatar.png" alt="profile image"
+        /></a>
+      </div>
       <nav inert hidden>
         <ul>
           <li>
@@ -58,27 +77,48 @@
         </ul>
       </nav>
     </header>
-
-    <p>Sneaker Company</p>
-    <h2>Fall Limited Edition Sneakers</h2>
-
-    <p>
-      These low-profile sneakers are your perfect casual wear companion.
-      Featuring a durable rubber outer sole, they’ll withstand everything the
-      weather can offer.
-    </p>
-
-    <p>$125.00</p>
-
-    <p>50%</p>
-
-    <p>$250.00</p>
-
-    <button>+</button>
-    <p>0</p>
-    <button>-</button>
-    <button>Add to cart</button>
-
+    <main>
+      <section class="product-image-container">
+        <button class="previous-button" aria-label="previous image">
+          <img src="./images/icon-previous.svg" alt="previous button icon" />
+        </button>
+        <button class="next-button" aria-label="next image">
+          <img src="./images/icon-next.svg" alt="next button icon" />
+        </button>
+        <img src="./images/image-product-1.jpg" alt="product image one" />
+      </section>
+      <section class="product-details-container">
+        <div class="text-content">
+          <p id="product-brand" class="product-brand">Sneaker Company</p>
+          <h2
+            id="product-title"
+            class="product-title"
+            aria-describedby="product-description"
+          >
+            Fall Limited Edition Sneakers
+          </h2>
+          <p id="product-description" class="product-description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+        </div>
+        <div class="price-content">
+          <p class="price-actual" aria-label="price">$125.00</p>
+          <div class="price-discount"><p>50%</p></div>
+          <p class="price-original">$250.00</p>
+        </div>
+        <div class="product-quantity">
+          <button><img src="./images/icon-minus.svg" alt="" /></button>
+          <p>0</p>
+          <button><img src="./images/icon-plus.svg" alt="" /></button>
+        </div>
+        <button class="add-to-cart-button">
+          <img src="./images/icon-cart.svg" alt="cart icon" />
+          <p>Add to cart</p>
+        </button>
+      </section>
+    </main>
     <footer>
       <div class="attribution">
         Challenge by
