@@ -6,6 +6,13 @@ export const cartList = [
     "actual price": 125,
     quantity: 3,
   },
+  {
+    name: "Fall Limited Edition Sneakers",
+    serial: "09090aa090",
+    "image src": "./images/image-product-1-thumbnail.jpg",
+    "actual price": 125,
+    quantity: 3,
+  },
 ];
 
 export function giveCartButtonFunction() {
@@ -80,17 +87,19 @@ function openCheckoutPopup() {
       `;
       cartListWrapper.append(elementCartItem);
     }
+  }
 
+  elementPopup.append(cartListWrapper);
+
+  if (cartList.length !== 0) {
     const elementLinkCheckout = document.createElement("a");
     elementLinkCheckout.classList.add("popup-link-checkout");
     elementLinkCheckout.innerHTML = "Checkout";
     elementLinkCheckout.href = "#";
     elementLinkCheckout.setAttribute("aria-label", "leads to checkout page");
 
-    cartListWrapper.append(elementLinkCheckout);
+    elementPopup.append(elementLinkCheckout);
   }
-
-  elementPopup.append(cartListWrapper);
 
   elementBody.insertBefore(elementPopup, elementMain);
 }
