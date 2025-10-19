@@ -2,14 +2,34 @@ export const cartList = [
   {
     name: "Fall Limited Edition Sneakers",
     serial: "09090aa090",
-    "image src": "./images/image-product-1-thumbnail.jpg",
-    "actual price": 125,
-    quantity: 3,
-  },
-  {
-    name: "Fall Limited Edition Sneakers",
-    serial: "09090aa090",
-    "image src": "./images/image-product-1-thumbnail.jpg",
+    pictures: [
+      {
+        large: "./images/image-product-1.jpg",
+        "large alt": "product image one",
+        thumbnail: "./images/image-product-1-thumbnail.jpg",
+        "thumbnail alt": "product thumbnail one",
+      },
+      {
+        large: "./images/image-product-2.jpg",
+        "large alt": "product image two",
+        thumbnail: "./images/image-product-2-thumbnail.jpg",
+        "thumbnail alt": "product thumbnail two",
+      },
+
+      {
+        large: "./images/image-product-3.jpg",
+        "large alt": "product image three",
+        thumbnail: "./images/image-product-3-thumbnail.jpg",
+        "thumbnail alt": "product thumbnail three",
+      },
+
+      {
+        large: "./images/image-product-4.jpg",
+        "large alt": "product image four",
+        thumbnail: "./images/image-product-4-thumbnail.jpg",
+        "thumbnail alt": "product thumbnail four",
+      },
+    ],
     "actual price": 125,
     quantity: 3,
   },
@@ -70,7 +90,7 @@ function openCheckoutPopup() {
       elementCartItem.innerHTML = `
           <img
             class="cart-item-image"
-            src="${cartItem["image src"]}"
+            src="${cartItem["pictures"][0]["thumbnail"]}"
             alt="product image"
           />
           <div>
@@ -111,4 +131,4 @@ function closeCheckoutPopup() {
   elementCart.setAttribute("aria-expanded", "false");
 }
 
-giveCartButtonFunction();
+// giveCartButtonFunction();
