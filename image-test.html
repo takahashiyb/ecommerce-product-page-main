@@ -6,14 +6,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.css" />
   </head>
-  
+
   <body>
     <header></header>
     <main>
       <section class="product-image-section">
-      
-        <div class="product-image-container">
-          <img class="product-image" src="" alt="" data-image-index="2" />
+        <div
+          class="product-image-container"
+          role="region"
+          aria-roledescription="carousel"
+        >
+          <img class="product-image" src="" alt="" data-image-index="0" />
           <button class="previous-button" aria-label="previous image">
             <img src="./images/icon-previous.svg" alt="previous button icon" />
           </button>
@@ -21,11 +24,9 @@
             <img src="./images/icon-next.svg" alt="next button icon" />
           </button>
         </div>
-          <div class="product-thumbnail-container">
-          </div>
+        <div class="product-thumbnail-container"></div>
       </section>
     </main>
-      <script src="./js/image-display.js" type="module"></script>
-    </script>
+    <script src="./js/image-display.js" type="module"></script>
   </body>
 </html>

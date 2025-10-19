@@ -1,5 +1,12 @@
 import { giveCartButtonFunction } from "./cart.js";
 
+import {
+  syncAriaWithViewport,
+  displayProductImage,
+  givePreviousNextButtonsFunction,
+  loadProductThumbnailButtons,
+} from "./image-display.js";
+
 function giveCloseNavButtonFunction(button) {
   button.addEventListener("click", () => {
     const regionNav = document.querySelector(".navigation-bar");
