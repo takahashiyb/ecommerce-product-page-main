@@ -36,8 +36,8 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### Links
 
-- Solution URL: [click here for GitHub repository](https://github.com/takahashiyb/)
-- Live Site URL: [click here for Live Site](https://github.com/takahashiyb/)
+- Solution URL: [click here for GitHub repository](https://github.com/takahashiyb/ecommerce-product-page-main)
+- Live Site URL: [click here for Live Site](https://takahashiyb.github.io/ecommerce-product-page-main/?serial=09090aa090)
 
 ## My process
 
