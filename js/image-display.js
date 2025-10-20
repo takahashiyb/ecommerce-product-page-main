@@ -3,6 +3,8 @@ import { cartList } from "./cart.js";
 export function syncAriaWithViewport() {
   const isDesktop = window.matchMedia("(min-width: 1023px)").matches;
 
+  const navButton = document.querySelector(".navigation-menu-button");
+
   const buttonPrevious = document.querySelector(".previous-button");
   const buttonNext = document.querySelector(".next-button");
   const buttons = [buttonPrevious, buttonNext];
@@ -17,6 +19,9 @@ export function syncAriaWithViewport() {
       buttons[i].setAttribute("hidden", "");
     }
 
+    navButton.setAttribute("inert", "");
+    navButton.setAttribute("hidden", "");
+
     containerThumbnail.removeAttribute("inert");
     containerThumbnail.removeAttribute("hidden");
   } else {
@@ -24,6 +29,9 @@ export function syncAriaWithViewport() {
       buttons[i].removeAttribute("inert");
       buttons[i].removeAttribute("hidden");
     }
+
+    navButton.removeAttribute("inert");
+    navButton.removeAttribute("hidden");
 
     containerThumbnail.setAttribute("inert", "");
     containerThumbnail.setAttribute("hidden", "");
